@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using VolunteerBoardMini.Data.Entities;
 using VolunteerBoardMini.Data.Services;
+using VolunteerBoardMini.Data.DTOs;
 
 namespace VolunteerBoardMini.Web.Controllers
 {
@@ -15,7 +16,7 @@ namespace VolunteerBoardMini.Web.Controllers
 
         public IActionResult Index()
         {
-            var initiatives = _service.GetAll();
+            var initiatives = _service.GetAllDtos();
             return View(initiatives);
         }
 
