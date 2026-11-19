@@ -1,4 +1,4 @@
-﻿namespace VolunteerBoardMini.Library.Models
+﻿namespace VolunteerBoardMini.Data.Entities
 {
     public class VolunteerRegistration
     {

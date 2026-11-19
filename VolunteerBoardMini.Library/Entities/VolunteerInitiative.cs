@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace VolunteerBoardMini.Library.Models
+namespace VolunteerBoardMini.Data.Entities
 {
     public class VolunteerInitiative
     {

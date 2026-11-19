@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using VolunteerBoardMini.Library.Models;
+using VolunteerBoardMini.Data.Entities;
 
 namespace VolunteerBoardMini.Web.Controllers
 {

@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 
-namespace VolunteerBoardMini.Library.Models
+
+namespace VolunteerBoardMini.Data.Entities
 {
     public class Volunteer
     {
