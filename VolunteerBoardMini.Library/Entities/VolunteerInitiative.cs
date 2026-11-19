@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace VolunteerBoardMini.Library.Models
 {
@@ -25,5 +20,7 @@ namespace VolunteerBoardMini.Library.Models
 
         [Required]
         public string Description { get; set; } = string.Empty;
+
+        public ICollection<VolunteerRegistration> Registrations { get; set; } = new List<VolunteerRegistration>();
     }
 }

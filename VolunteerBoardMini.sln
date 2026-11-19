@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolunteerBoardMini.Library", "VolunteerBoardMini.Library\VolunteerBoardMini.Library.csproj", "{107C416F-6F42-45E0-8081-745CC735814C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolunteerBoardMini.Data", "VolunteerBoardMini.Library\VolunteerBoardMini.Data.csproj", "{107C416F-6F42-45E0-8081-745CC735814C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolunteerBoardMini.Web", "VolunteerBoardMini.Web\VolunteerBoardMini.Web.csproj", "{A73F13D6-210C-4FC2-91AD-E488627465B8}"
 EndProject
