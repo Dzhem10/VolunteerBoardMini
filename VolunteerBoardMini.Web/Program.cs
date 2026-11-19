@@ -1,3 +1,4 @@
+using VolunteerBoardMini.Data.Services;
 using Microsoft.EntityFrameworkCore;
 using VolunteerBoardMini.Data.Data;
 
@@ -12,6 +13,8 @@ namespace VolunteerBoardMini.Web
             builder.Services.AddDbContext<VolunteerBoardDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped<VolunteerInitiativeService>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

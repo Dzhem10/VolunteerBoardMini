@@ -1,35 +1,41 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using VolunteerBoardMini.Data.Entities;
+using VolunteerBoardMini.Data.Services;
 
 namespace VolunteerBoardMini.Web.Controllers
 {
     public class VolunteerInitiativesController : Controller
     {
+        private readonly VolunteerInitiativeService _service;
+
+        public VolunteerInitiativesController(VolunteerInitiativeService service)
+        {
+            _service = service;
+        }
+
         public IActionResult Index()
         {
-            var initiatives = new List<VolunteerInitiative>
-            {
-                new VolunteerInitiative
-                {
-                    Id = 1,
-                    Name = "Почистване на парк",
-                    Organizer = "Еко организация",
-                    Location = "Перник",
-                    RequiredVolunteers = 10,
-                    Description = "Почистване и облагородяване на градския парк."
-                },
-                new VolunteerInitiative
-                {
-                    Id = 2,
-                    Name = "Помощ за възрастни хора",
-                    Organizer = "Доброволчески център",
-                    Location = "София",
-                    RequiredVolunteers = 5,
-                    Description = "Помощ при ежедневни задачи."
-                }
-            };
-
+            var initiatives = _service.GetAll();
             return View(initiatives);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(VolunteerInitiative initiative)
+        {
+            if (ModelState.IsValid)
+            {
+                _service.Add(initiative);
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(initiative);
         }
     }
 }
